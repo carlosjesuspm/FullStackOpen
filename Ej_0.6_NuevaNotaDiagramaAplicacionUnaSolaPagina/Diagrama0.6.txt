@@ -1,0 +1,8 @@
+Diagrama Secuencias
+    Participante servidor
+    Participante navegador
+
+    navegador->>servidor: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+    activa servidor
+    servidor-->>navegador: {"message":"note created"}
+    desactiva servidor

@@ -1,0 +1,28 @@
+Diagrama Secuencias
+    Participante servidor
+    Participante navegador
+
+    navegador->>servidor: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+    activa servidor
+    servidor-->>navegador: HTML document
+    desactiva servidor
+
+    navegador->>servidor: GET https://studies.cs.helsinki.fi/exampleapp/notes
+    activa servidor
+    servidor-->>navegador: HTML document
+    desactiva servidor
+
+    navegador->>servidor: GET https://studies.cs.helsinki.fi/exampleapp/main.css
+    activa servidor
+    servidor-->>navegador: the css file
+    desactiva servidor
+
+    navegador->>servidor: GET https://studies.cs.helsinki.fi/exampleapp/main.js
+    activa servidor
+    servidor-->>navegador: the JavaScript file
+    desactiva servidor
+
+    navegador->>servidor: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+    activa servidor
+    navegador-->>browser: [{ "content": "Nura", "date": "2024-02-12T03:03:17.933Z" }, ... ]
+    desactiva servidor
